@@ -1,0 +1,47 @@
+﻿@page "/overview"
+@inject HttpClient Http
+
+<div class="overview-page container">
+    <h1>High Performance Overview</h1>
+    <p>In deze sectie krijg je een overzicht van de belangrijkste methodologieën en tools die een organisatie kunnen helpen om te transformeren naar een high-performance entiteit.</p>
+
+    <div class="methodology-list">
+        @if (AgileMethods != null && AgileMethods.Any())
+        {
+            @foreach (var method in AgileMethods)
+            {
+                <div class="methodology-item">
+                    <h2>@method.Name</h2>
+                    <p>@method.Description</p>
+                </div>
+            }
+        }
+        else
+        {
+            <p>Laden...</p>
+        }
+    </div>
+</div>
+
+@code {
+    private List<Agile> AgileMethods;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            AgileMethods = await Http.GetFromJsonAsync<List<Agile>>("https://localhost:7060/api/agile");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Fout bij het laden van de gegevens: {ex.Message}");
+        }
+    }
+
+    public class Agile
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+    }
+}
