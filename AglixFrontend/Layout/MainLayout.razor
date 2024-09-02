@@ -1,19 +1,17 @@
 ﻿@inherits LayoutComponentBase
 
-<header class="top-header">
-    <div class="container">
-        <h1 class="ag-lix-title">A G L I X</h1>
-    </div>
-</header>
+<div style="display: flex; flex-direction: column; height: 100vh;">
+    <!-- Top Header -->
+    <RadzenHeader Style="background-color: #343a40; color: #ffffff; padding: 20px; text-align: center; height: 80px; flex-shrink: 0;">
+        <RadzenText Text="A G L I X" Style="color: slategrey; font-size: 50px; font-weight: bold; text-align: center" />
+    </RadzenHeader>
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
-
-    <main>
-        <article class="content px-4">
+    <!-- Sidebar and Main Content -->
+    <div style="display: flex; flex: 1; overflow: hidden;">
+        <NavMenu /> <!-- Sidebar -->
+        <div>
+            <!-- Main content area -->
             @Body
-        </article>
-    </main>
+        </div>
+    </div>
 </div>

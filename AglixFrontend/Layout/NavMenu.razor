@@ -1,34 +1,21 @@
-﻿<div class="sidebar">
-    <div class="navbar-brand">
-        A G L I X
-    </div>
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/" Match="NavLinkMatch.All">
-                <span>Home</span>
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="overview" Match="NavLinkMatch.Prefix">
-                <span>Guide</span>
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="organizations" Match="NavLinkMatch.Prefix">
-                <span>Organizations</span>
-            </NavLink>
-        </div>
-    </nav>
-</div>
+﻿<RadzenSidebar Style="overflow: hidden;">
+    <RadzenPanelMenu Style="background-color: #495057; color: white; margin-top: 100px; width: 250px; height: 100vh;">
+        <Items>
+            <RadzenPanelMenuItem Text="Home" Path="home" Icon="home" />
+            <RadzenPanelMenuItem Text="Guide" Path="guide" Icon="book" />
+            <RadzenPanelMenuItem Text="Organizations" Path="organizations" Icon="business" />
+        </Items>
+    </RadzenPanelMenu>
+</RadzenSidebar>
 
-
-@code {
-    private bool collapseNavMenu = true;
-
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
+<style>
+    .rz-sidebar {
+        background-color: #495057 !important;
+        color: white !important;
+        border-inline-end: 1px solid #343a40 !important;
     }
-}
+
+    .rz-sidebar .rz-sidebar-link:hover {
+        background-color: #444446 !important;
+    }
+</style>

@@ -1,20 +1,40 @@
-﻿@page "/"
-@inject IJSRuntime JS
+﻿@page "/home"
 
-<main class="d-flex justify-content-center align-items-center vh-100">
+<RadzenContent>
     <div class="content-area">
-        <h2>Welkom bij AGLIX</h2>
-        <p>Deze applicatie is ontworpen om je te helpen bij het identificeren en implementeren van methodologieën die je organisatie kunnen transformeren naar een high-performance entiteit. Verken de methodologieën of beheer organisaties om aan de slag te gaan.</p>
+        <RadzenCard Style="max-width: 600px; margin-left: 400px; auto; text-align: center; background-color: #333; color: #fff; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);">
+            <RadzenHeading Size="H1" Text="Welkom bij AGLIX" />
+            <RadzenParagraph>
+                Deze applicatie is ontworpen om je te helpen bij het identificeren en implementeren van methodologieën die je organisatie kunnen transformeren naar een high-performance entiteit.
+            </RadzenParagraph>
+            <RadzenParagraph>
+                Verken de methodologieën of beheer organisaties om aan de slag te gaan.
+            </RadzenParagraph>
+        </RadzenCard>
     </div>
-</main>
+</RadzenContent>
 
-
-@code {
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender)
-        {
-            await JS.InvokeVoidAsync("eval", "document.querySelector('.content-area').classList.add('loaded');");
-        }
+<style>
+    .content-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 2rem;
+        background-color: #transparent; 
     }
-}
+
+    .content-area .radzen-card {
+        background-color: #2c2c3e; 
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); 
+    }
+
+    .content-area .radzen-heading {
+        color: #e0e0e0; 
+    }
+
+    .content-area .radzen-paragraph {
+        color: #cccccc; 
+    }
+</style>
