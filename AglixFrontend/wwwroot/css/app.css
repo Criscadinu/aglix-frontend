@@ -189,15 +189,49 @@ code {
         }
 
 
+
+/* Verzeker dat de main-container flexbox gebruikt om het inhoudsgebied te centreren */
 main {
-    margin-left: 270px;
+    margin-left: 70px; 
     padding: 2rem;
     min-height: 100vh;
+    display: flex;
+    justify-content: center; /* Horizontaal centreren */
+    align-items: center; /* Verticaal centreren */
 }
 
+    /* Stijlen voor het centrale inhoudsgebied */
+    main .content-area {
+        max-width: 800px; /* Beperkte breedte voor leesbaarheid */
+        background-color: #212121; /* Donkere achtergrond die overeenkomt met het thema */
+        color: #e0e0e0; /* Lichte tekst voor contrast */
+        padding: 2rem;
+        border-radius: 8px; 
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+        margin: 0 auto; 
+        position: relative;
+        top: 0; 
+        transform: none; 
+    }
+
+        /* Stijlen voor de tekst in het inhoudsgebied */
+        main .content-area h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center; /* Tekst centreren */
+        }
+
+        main .content-area p {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            text-align: center; /* Tekst centreren */
+        }
+
+/* Stijlen voor de content-wrapper */
 .content {
     background-color: #282c34;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
+
