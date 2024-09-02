@@ -114,7 +114,6 @@ code {
     text-align: center;
 }
 
-/* Stijl voor de "A G L I X" titel */
 .ag-lix-title {
     font-size: 2rem;
     font-weight: 600;
@@ -124,8 +123,8 @@ code {
 }
 
 .sidebar {
-    background-color: #2C3E50; /* Donkerblauwe/Grijze kleur voor een strakke look */
-    background-image: linear-gradient(135deg, #2C3E50 0%, #34495E 100%); /* Subtiele gradient voor een moderne uitstraling */
+    background-color: #2C3E50;
+    background-image: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
     padding: 1.5rem 1rem;
     color: #f5f5f5;
     width: 250px;
@@ -140,7 +139,6 @@ code {
 }
 
 
-    /* Stijl voor de titel in de zijbalk */
     .sidebar h1 {
         font-size: 1.5rem;
         font-weight: 600;
@@ -149,36 +147,34 @@ code {
         text-align: center;
     }
 
-    /* Menu-item stijl */
     .sidebar .nav-item {
         margin-bottom: 0.5rem;
     }
 
-    /* Stijl voor de sidebar knoppen */
     .sidebar .nav-link {
         display: block;
         padding: 0.75rem 1rem;
         font-size: 1rem;
         font-weight: 500;
-        color: #ffffff; /* Witte tekst voor een strakke look */
+        color: #ffffff; 
         text-decoration: none;
-        background-color: #2C3E50; /* Donkere, stijlvolle achtergrondkleur */
-        border-radius: 8px; /* Afgeronde hoeken voor een moderne look */
+        background-color: #2C3E50; 
+        border-radius: 8px; 
         text-align: center;
         transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lichte schaduw voor diepte */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
         .sidebar .nav-link:hover {
-            background-color: #34495E; /* Iets lichtere kleur bij hover */
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Versterkte schaduw bij hover */
-            transform: translateY(-2px); /* Subtiele 'lift' bij hover */
+            background-color: #34495E; 
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px); 
         }
 
         .sidebar .nav-link.active {
-            background-color: #1ABC9C; /* Aansprekende accentkleur voor actieve items */
-            color: #ffffff; /* Witte tekst op actieve knoppen */
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Nog iets sterkere schaduw voor actieve items */
+            background-color: #1ABC9C; 
+            color: #ffffff; 
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
         }
 
         .sidebar .nav-link span {
@@ -189,49 +185,41 @@ code {
         }
 
 
-
-/* Verzeker dat de main-container flexbox gebruikt om het inhoudsgebied te centreren */
 main {
-    margin-left: 70px; 
+    margin-left: 270px;
     padding: 2rem;
     min-height: 100vh;
     display: flex;
-    justify-content: center; /* Horizontaal centreren */
-    align-items: center; /* Verticaal centreren */
+    justify-content: center;
+    align-items: center;
 }
 
-    /* Stijlen voor het centrale inhoudsgebied */
     main .content-area {
-        max-width: 800px; /* Beperkte breedte voor leesbaarheid */
-        background-color: #212121; /* Donkere achtergrond die overeenkomt met het thema */
-        color: #e0e0e0; /* Lichte tekst voor contrast */
+        max-width: 800px; 
+        background-color: #212121; 
+        color: #e0e0e0; 
         padding: 2rem;
         border-radius: 8px; 
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
         margin: 0 auto; 
-        position: relative;
-        top: 0; 
-        transform: none; 
+        position: absolute;
+        top: 30%;
+        left: 30%;
+        transform: translateY(-50%);
+        text-align: left; 
     }
 
-        /* Stijlen voor de tekst in het inhoudsgebied */
         main .content-area h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            text-align: center; /* Tekst centreren */
+            text-align: left; 
         }
 
         main .content-area p {
             font-size: 1.25rem;
             line-height: 1.7;
-            text-align: center; /* Tekst centreren */
+            text-align: left;
+            margin-top: 20px; 
         }
 
-/* Stijlen voor de content-wrapper */
-.content {
-    background-color: #282c34;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
 
