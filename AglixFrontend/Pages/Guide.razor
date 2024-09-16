@@ -2,7 +2,6 @@
 @inject HttpClient Http
 
 <RadzenPanel Style="background-color: #1e1e1e; height: 100vh;">
-    <!-- Dark background for the entire panel -->
     <div style="padding: 20px; margin-top: 20px;">
         <RadzenRow>
             @if (agileTopics != null)
@@ -10,10 +9,10 @@
                 @foreach (var agile in agileTopics)
                 {
                     <RadzenColumn Size="3">
-                        <RadzenCard Style="background-color: #343a40; color: white; padding: 10px; margin: 10px; width: 200px; height: 150px;">
-                            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
-                                <RadzenIcon Icon="@agile.Icon" Style="font-size: 20px; color: #00ff84;" />
-                                <h5 style="margin: 5px 0; font-size: 16px; text-align: center;">@agile.Name</h5>
+                        <RadzenCard Style="background-color: #343a40; color: white; padding: 10px; margin: 10px; text-align: center;">
+                            <div>
+                                <img src="@agile.ImageUrl" alt="@agile.Name" style="width: 50px; height: 50px; margin-bottom: 10px;" />
+                                <h5 style="margin: 5px 0; font-size: 16px;">@agile.Name</h5>
                             </div>
                         </RadzenCard>
                     </RadzenColumn>
@@ -21,7 +20,7 @@
             }
             else
             {
-                <p style="color: white;">Loading...</p> <!-- Text color set to white for contrast -->
+                <p style="color: white;">Loading...</p> 
             }
         </RadzenRow>
     </div>
@@ -47,6 +46,6 @@
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public string Icon { get; set; } // Assuming you have an icon property
+        public string ImageUrl { get; set; }
     }
 }
