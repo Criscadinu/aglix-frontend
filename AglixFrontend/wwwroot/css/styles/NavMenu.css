@@ -1,0 +1,17 @@
+﻿.rz-sidebar {
+    background-color: #495057 !important;
+    color: white !important;
+    border-inline-end: 1px solid #343a40 !important;
+}
+
+    .rz-sidebar .rz-sidebar-link:hover {
+        background-color: #444446 !important;
+    }
+
+.rz-panelmenu {
+    background-color: #495057;
+    color: white;
+    margin-top: 100px;
+    width: 250px;
+    height: 100vh;
+}

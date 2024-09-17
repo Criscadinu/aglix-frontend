@@ -1,0 +1,27 @@
+﻿.panel-background {
+    background-color: #1e1e1e;
+    height: 100vh;
+}
+
+.panel-content {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.card-container {
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.card-image {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.loading-text {
+    color: white;
+}

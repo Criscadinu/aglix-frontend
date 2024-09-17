@@ -1,0 +1,17 @@
+﻿.rz-header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.rz-text {
+    color: slategrey;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.main-content {
+    margin-left: 250px; /* Adjust this to align with the sidebar width */
+    padding: 20px;
+}

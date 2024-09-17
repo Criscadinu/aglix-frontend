@@ -1,18 +1,19 @@
 ﻿@page "/guide"
-@inject HttpClient Http
 
-<RadzenPanel Style="background-color: #1e1e1e; height: 100vh;">
-    <div style="padding: 20px; margin-top: 20px;">
+<link href="css/styles/Guide.css" rel="stylesheet" />
+
+<RadzenPanel class="panel-background">
+    <div class="panel-content">
         <RadzenRow>
             @if (agileTopics != null)
             {
                 @foreach (var agile in agileTopics)
                 {
                     <RadzenColumn Size="3">
-                        <RadzenCard Style="background-color: #343a40; color: white; padding: 10px; margin: 10px; text-align: center;">
+                        <RadzenCard class="card-container">
                             <div>
-                                <img src="@agile.ImageUrl" alt="@agile.Name" style="width: 50px; height: 50px; margin-bottom: 10px;" />
-                                <h5 style="margin: 5px 0; font-size: 16px;">@agile.Name</h5>
+                                <img src="@agile.ImageUrl" alt="@agile.Name" class="card-image" />
+                                <h5>@agile.Name</h5>
                             </div>
                         </RadzenCard>
                     </RadzenColumn>
@@ -20,32 +21,8 @@
             }
             else
             {
-                <p style="color: white;">Loading...</p> 
+                <p class="loading-text">Loading...</p>
             }
         </RadzenRow>
     </div>
 </RadzenPanel>
-
-@code {
-    private List<Agile> agileTopics;
-
-    protected override async Task OnInitializedAsync()
-    {
-        try
-        {
-            agileTopics = await Http.GetFromJsonAsync<List<Agile>>("https://localhost:7060/api/agile");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Error fetching data: {ex.Message}");
-        }
-    }
-
-    public class Agile
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string ImageUrl { get; set; }
-    }
-}
