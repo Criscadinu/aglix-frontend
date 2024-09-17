@@ -1,0 +1,22 @@
+﻿.content-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 2rem;
+    background-color: transparent;
+}
+
+    .content-area .radzen-card {
+        background-color: #2c2c3e;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    .content-area .radzen-heading {
+        color: #e0e0e0;
+    }
+
+    .content-area .radzen-paragraph {
+        color: #cccccc;
+    }

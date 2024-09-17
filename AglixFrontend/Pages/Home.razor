@@ -1,40 +1,17 @@
 ﻿@page "/home"
 
+<link href="css/styles/Home.css" rel="stylesheet" />
+
 <RadzenContent>
     <div class="content-area">
-        <RadzenCard Style="max-width: 600px; margin-left: 400px; auto; text-align: center; background-color: #333; color: #fff; border-radius: 12px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);">
-            <RadzenHeading Size="H1" Text="Welkom bij AGLIX" />
-            <RadzenParagraph>
+        <RadzenCard class="radzen-card">
+            <RadzenHeading Size="H1" Text="Welkom bij AGLIX" class="radzen-heading" />
+            <RadzenParagraph class="radzen-paragraph">
                 Deze applicatie is ontworpen om je te helpen bij het identificeren en implementeren van methodologieën die je organisatie kunnen transformeren naar een high-performance entiteit.
             </RadzenParagraph>
-            <RadzenParagraph>
+            <RadzenParagraph class="radzen-paragraph">
                 Verken de methodologieën of beheer organisaties om aan de slag te gaan.
             </RadzenParagraph>
         </RadzenCard>
     </div>
 </RadzenContent>
-
-<style>
-    .content-area {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        padding: 2rem;
-        background-color: #transparent; 
-    }
-
-    .content-area .radzen-card {
-        background-color: #2c2c3e; 
-        border-radius: 12px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); 
-    }
-
-    .content-area .radzen-heading {
-        color: #e0e0e0; 
-    }
-
-    .content-area .radzen-paragraph {
-        color: #cccccc; 
-    }
-</style>
