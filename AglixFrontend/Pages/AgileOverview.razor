@@ -10,7 +10,7 @@
                 @foreach (var implementation in agileImplementations)
                 {
                     <RadzenColumn Size="3">
-                        <RadzenCard class="card-container">
+                        <RadzenCard class="card-container" @onclick="() => NavigateToImplementation(implementation.Name)">
                             <div>
                                 <img src="@implementation.ImageUrl" alt="@implementation.Name" class="card-image" />
                                 <h5>@implementation.Name</h5>

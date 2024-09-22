@@ -9,6 +9,9 @@ namespace AglixFrontend.Pages
         [Inject]
         public HttpClient Http { get; set; }
 
+        [Inject]
+        public required NavigationManager Navigation { get; set; }
+
         private List<AgileImplementation> agileImplementations;
 
         protected override async Task OnInitializedAsync()
@@ -20,6 +23,14 @@ namespace AglixFrontend.Pages
             catch (Exception ex)
             {
                 Console.WriteLine($"Error fetching data: {ex.Message}");
+            }
+        }
+
+        private void NavigateToImplementation(string implementationName)
+        {
+            if (implementationName == "Scrum")
+            {
+                Navigation.NavigateTo("/scrum-overview");
             }
         }
     }
