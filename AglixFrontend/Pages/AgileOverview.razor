@@ -1,0 +1,28 @@
+﻿@page "/agile-implementations-overview"
+
+<link href="css/Styles/AgileOverview.css" rel="stylesheet" />
+
+
+<RadzenPanel Style="background-color: #1e1e1e; height: 100vh;">
+    <div class="content-area">
+        <RadzenRow>
+            @if (agileImplementations != null)
+            {
+                @foreach (var implementation in agileImplementations)
+                {
+                    <RadzenColumn Size="3">
+                        <RadzenCard class="implementation-card">
+                            <h5>@implementation.Name</h5>
+                            <p>@implementation.Description</p>
+                        </RadzenCard>
+                    </RadzenColumn>
+                }
+            }
+            else
+            {
+                <p>Loading...</p>
+            }
+        </RadzenRow>
+    </div>
+</RadzenPanel>
+

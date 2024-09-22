@@ -10,7 +10,7 @@
                 @foreach (var agile in agileTopics)
                 {
                     <RadzenColumn Size="3">
-                        <RadzenCard class="card-container">
+                        <RadzenCard class="card-container" @onclick="() => NavigateToOverview(agile.Name)">
                             <div>
                                 <img src="@agile.ImageUrl" alt="@agile.Name" class="card-image" />
                                 <h5>@agile.Name</h5>
