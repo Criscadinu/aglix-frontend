@@ -15,12 +15,11 @@
     margin: 10px;
     text-align: center;
     cursor: pointer; /* Make it appear clickable */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover */
+    transition: transform 0.2s ease;
 }
 
     .card-container:hover {
         transform: scale(1.05); /* Slight zoom effect on hover */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
     }
 
 .card-image {

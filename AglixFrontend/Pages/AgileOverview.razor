@@ -1,28 +1,28 @@
-﻿@page "/agile-implementations-overview"
+﻿@page "/agile-overview"
 
-<link href="css/Styles/AgileOverview.css" rel="stylesheet" />
+<link href="css/styles/AgileOverview.css" rel="stylesheet" />
 
-
-<RadzenPanel Style="background-color: #1e1e1e; height: 100vh;">
-    <div class="content-area">
+<RadzenPanel class="panel-background">
+    <div class="panel-content">
         <RadzenRow>
             @if (agileImplementations != null)
             {
                 @foreach (var implementation in agileImplementations)
                 {
                     <RadzenColumn Size="3">
-                        <RadzenCard class="implementation-card">
-                            <h5>@implementation.Name</h5>
-                            <p>@implementation.Description</p>
+                        <RadzenCard class="card-container">
+                            <div>
+                                <img src="@implementation.ImageUrl" alt="@implementation.Name" class="card-image" />
+                                <h5>@implementation.Name</h5>
+                            </div>
                         </RadzenCard>
                     </RadzenColumn>
                 }
             }
             else
             {
-                <p>Loading...</p>
+                <p class="loading-text">Loading...</p>
             }
         </RadzenRow>
     </div>
 </RadzenPanel>
-

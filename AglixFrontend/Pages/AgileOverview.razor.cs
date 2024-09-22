@@ -15,7 +15,7 @@ namespace AglixFrontend.Pages
         {
             try
             {
-                agileImplementations = await Http.GetFromJsonAsync<List<AgileImplementation>>("https://localhost:7060/api/AgileImplementation");
+                agileImplementations = await Http.GetFromJsonAsync<List<AgileImplementation>>("https://localhost:7060/api/agileimplementation");
             }
             catch (Exception ex)
             {
