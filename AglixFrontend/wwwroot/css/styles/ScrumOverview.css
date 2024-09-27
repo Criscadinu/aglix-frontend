@@ -4,14 +4,23 @@
     text-align: center;
 }
 
-.radzen-heading {
-    color: #61dafb;
+.scrum-overview h1 {
+    color: #00adb5 !important; 
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    text-shadow: none; 
 }
 
-.radzen-paragraph {
-    color: #ffffff;
-    font-size: 1.2rem;
-    margin-top: 20px;
+.scrum-overview p {
+    color: #eeeeee !important; 
+    font-size: 1.1rem;
+    margin-top: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.02rem;
+}
+
+.scrum-overview h1:hover {
+    color: #00c3cc !important; 
+    transition: color 0.3s ease-in-out;
 }
