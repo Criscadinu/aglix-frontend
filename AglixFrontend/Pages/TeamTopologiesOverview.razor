@@ -1,0 +1,73 @@
+﻿@page "/team-topologies-overview"
+
+<link href="css/styles/TeamTopologiesOverview.css" rel="stylesheet" />
+
+<RadzenPanel Style="background-color: #1e1e1e; height: 100vh;">
+    <div class="content-area team-topologies-overview">
+        <RadzenHeading Size="H1" Text="Team Topologies Overview" />
+        <RadzenParagraph>
+            A detailed guide to understanding, practicing, and implementing Team Topologies.
+        </RadzenParagraph>
+        <RadzenButton Icon="arrow_back" Text="Back" Click="GoBack" Style="background-color: #343a40; color: white; margin-bottom: 20px;" />
+
+        <RadzenAccordion AllowMultiple="false">
+            <Items>
+                <!-- What is Team Topologies? -->
+                <RadzenAccordionItem Text="What is Team Topologies?" Icon="help_outline">
+                    <p>
+                        Team Topologies is an organizational model that helps you design and evolve your teams for fast flow. It emphasizes four team types
+                        and three core interaction modes to help teams align effectively with the flow of work.
+                    </p>
+                    <p>
+                        Team Topologies focuses on enabling teams to work together efficiently, respecting clear boundaries, and utilizing the right interaction modes
+                        for the problem at hand.
+                    </p>
+                </RadzenAccordionItem>
+
+                <!-- Types of Teams in Team Topologies -->
+                <RadzenAccordionItem Text="Types of Teams in Team Topologies" Icon="people">
+                    <h4>Four Types of Teams:</h4>
+                    <ul>
+                        <li><b>Stream-aligned Team:</b> Responsible for a specific flow of work aligned with a business domain.</li>
+                        <li><b>Enabling Team:</b> Helps stream-aligned teams acquire missing capabilities or overcome obstacles.</li>
+                        <li><b>Complicated Subsystem Team:</b> Focuses on difficult areas requiring deep expertise, such as highly specialized algorithms.</li>
+                        <li><b>Platform Team:</b> Provides internal services to other teams to help them deliver with less cognitive load.</li>
+                    </ul>
+                </RadzenAccordionItem>
+
+                <!-- Interaction Modes in Team Topologies -->
+                <RadzenAccordionItem Text="Interaction Modes in Team Topologies" Icon="device_hub">
+                    <h4>Three Core Interaction Modes:</h4>
+                    <ul>
+                        <li><b>Collaboration:</b> Two or more teams work together for a defined period of time to discover new solutions.</li>
+                        <li><b>X-as-a-Service:</b> One team provides a service to others (such as a platform) with well-defined APIs.</li>
+                        <li><b>Facilitating:</b> An enabling team guides a stream-aligned team through the adoption of new tools, techniques, or approaches.</li>
+                    </ul>
+                </RadzenAccordionItem>
+
+                <!-- Common Pitfalls in Team Topologies -->
+                <RadzenAccordionItem Text="Common Pitfalls in Team Topologies" Icon="warning">
+                    <p>
+                        As with any model, there are common pitfalls to avoid in Team Topologies:
+                    </p>
+                    <ul>
+                        <li><b>Ignoring Team Boundaries:</b> Not respecting the boundaries between different types of teams can lead to confusion and inefficiency.</li>
+                        <li><b>Overusing Collaboration:</b> Collaboration is important, but too much of it can increase cognitive load and slow progress.</li>
+                        <li><b>Failing to Evolve:</b> Teams and their interactions should evolve over time. Sticking to the same setup for too long can lead to stagnation.</li>
+                    </ul>
+                </RadzenAccordionItem>
+
+                <!-- Team Topologies Implementation Guide -->
+                <RadzenAccordionItem Text="Team Topologies Implementation Guide" Icon="settings">
+                    <h4>Steps to Implement Team Topologies:</h4>
+                    <ul>
+                        <li><b>Assess Current Team Structure:</b> Identify if your current team setup aligns with the Team Topologies model.</li>
+                        <li><b>Define Team Responsibilities:</b> Clearly define each team's role and responsibilities based on the four team types.</li>
+                        <li><b>Introduce Interaction Modes:</b> Determine how different teams will interact, using collaboration, X-as-a-service, or facilitating.</li>
+                        <li><b>Foster Evolution:</b> Ensure teams can evolve as the organization and products grow.</li>
+                    </ul>
+                </RadzenAccordionItem>
+            </Items>
+        </RadzenAccordion>
+    </div>
+</RadzenPanel>

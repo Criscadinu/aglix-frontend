@@ -1,0 +1,47 @@
+﻿.content-area {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.team-topologies-overview h1 {
+    color: #00adb5 !important;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    text-shadow: none;
+}
+
+.team-topologies-overview p {
+    color: #eeeeee !important;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.02rem;
+}
+
+.team-topologies-overview h1:hover {
+    color: #00c3cc !important;
+    transition: color 0.3s ease-in-out;
+}
+
+.team-topologies-overview .rz-accordion {
+    width: 75%;
+    margin: 0 auto;
+    background-color: #1e1e1e;
+}
+
+    .team-topologies-overview .rz-accordion .rz-accordion-item {
+        background-color: #333 !important;
+    }
+
+    .team-topologies-overview .rz-accordion .rz-accordion-header {
+        background-color: #444 !important;
+        color: white !important;
+    }
+
+    .team-topologies-overview .rz-accordion .rz-accordion-content {
+        background-color: #333 !important;
+        color: white !important;
+    }
+
